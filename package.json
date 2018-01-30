@@ -1,0 +1,39 @@
+{
+  "name": "simple-api",
+  "version": "1.0.0",
+  "description": "A simple API to study express",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "dev": "PORT=5000 NODE_ENV=development nodemon index.js",
+    "start": "node index",
+    "lint": "eslint *.js **/*.js",
+    "pretest": "npm run lint",
+    "test": "istanbul cover _mocha test/**/*.js --print both"
+  },
+  "keywords": [
+    "API",
+    "Express",
+    "NodeJS"
+  ],
+  "author": "hugo.machado@outlook.com",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.11"
+  }
+}
