@@ -8,10 +8,11 @@
     "node": ">=8"
   },
   "scripts": {
-    "dev": "PORT=5000 NODE_ENV=development nodemon index.js",
-    "start": "node index",
+    "dev": "NODE_ENV=development NODE_PATH=src nodemon index.js",
+    "start": "NODE_ENV=production NODE_PATH=src node index",
     "lint": "eslint *.js **/*.js",
-    "pretest": "npm run lint",
+    "check": "nsp check",
+    "pretest": "npm run lint && npm run check",
     "test": "istanbul cover _mocha test/**/*.js --print both"
   },
   "keywords": [
@@ -23,7 +24,9 @@
   "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.16.2",
+    "mongodb": "^3.0.2",
     "morgan": "^1.9.0",
+    "secure-password": "^3.0.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {
@@ -35,6 +38,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.0.0",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "nsp": "^3.2.1"
   }
 }
