@@ -19,4 +19,4 @@ USER node
 
 EXPOSE 5000
 
-CMD ["node", "index"]
+ENTRYPOINT ["sh", "docker-entrypoint.sh"]
